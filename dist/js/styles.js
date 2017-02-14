@@ -1,1 +1,3 @@
-require('../css/styles.scss');
+import '../css/styles.scss';
+//bootstrap
+import '../css/bootstrap/bootstrap.scss';

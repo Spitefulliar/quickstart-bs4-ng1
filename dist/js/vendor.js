@@ -1,11 +1,13 @@
 //vendor libs
-require('jquery');
-import slick from 'slick-carousel';
-// require('async');
-// require('moment');
+import 'jquery';
+import 'slick-carousel';
+import 'slick-carousel';
+
 
 // vendor-styles
-require('normalize.css/normalize.css');
-require('angular/angular-csp.css');
-// require('angular-material/angular-material.css');
+// import 'normalize.css/normalize.css';
+import 'angular/angular-csp.css';
+// import 'angular-material/angular-material.css';
+
+
 

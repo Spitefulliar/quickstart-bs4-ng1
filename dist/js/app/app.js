@@ -8,6 +8,7 @@ import routeProvider from './providers/routeProvider.js';
 
 //angular modules
 import angular from 'angular';
+import angularUi from 'angular-ui-bootstrap';
 import ngAria from 'angular-aria';
 import touch from 'angular-touch';
 import uirouter from 'angular-ui-router';
@@ -67,6 +68,7 @@ let appModulesArr = AppModulesArr.concat([
     'svgBaseFix',
     'angular-baron-scrollbar',
     'slickCarousel',
+    'ui.bootstrap',
     // cookies,
     // ui, 
     // uiTpls, 

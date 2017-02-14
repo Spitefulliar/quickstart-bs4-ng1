@@ -40,10 +40,16 @@ var config = {
             },
             {
               test: /\.scss$/,
-              exclude: /node_modules/,
+              // exclude: /node_modules/,
               loader: ExtractTextPlugin.extract('style-loader', 'css-raw-loader?-minimize!postcss-loader?package=defaults!sass-loader') 
               // loader: ExtractTextPlugin.extract('style-loader', 'css-raw-loader?-minimize!sass-loader') 
             },
+            // {
+            //   test: /\.scss$/,
+            //   include: /node_modules/,
+            //   loader: ExtractTextPlugin.extract('style-loader', 'postcss-loader?package=defaults!sass-loader') 
+            //   // loader: ExtractTextPlugin.extract('style-loader', 'css-raw-loader?-minimize!sass-loader') 
+            // },
             {
               test: /\.css$/,
               // exclude: /(node_modules)/,
@@ -104,6 +110,10 @@ var config = {
               test: require.resolve("jquery"), 
               loader: "expose-loader?$!expose-loader?jQuery" 
             },
+            { 
+              test: require.resolve("tether"), 
+              loader: "expose-loader?$!expose-loader?Tether" 
+            },
         ]
     },
     plugins: [
@@ -130,6 +140,7 @@ var config = {
           'jQuery': 'jquery',
           'window.jQuery': 'jquery',
           'Slick': 'slick-carousel',
+          'Tether': 'tether'
           // 'async': "async",
           // 'moment': 'moment',
           // ScrollMagic: 'scrollmagic',
@@ -152,8 +163,8 @@ var config = {
     ],
     postcss: function () {
       return {
-        oldsup: [autoprefixer({ browsers: ['last 5 version','safari >= 8, ie >= 8'] }), csswring], //with minification
-        defaults:  [autoprefixer({ browsers: ['last 3 version'] })]
+        oldsup: [require('postcss-flexbugs-fixes'), autoprefixer({ browsers: ['last 5 version','safari >= 8, ie >= 8'] }), csswring], //with minification
+        defaults:  [require('postcss-flexbugs-fixes'), autoprefixer({ browsers: ['last 3 version']}) ]
       };
     },
     watch: true
