@@ -16,7 +16,7 @@
           <li class="nav-item">
             <a class="nav-link disabled" href="#">Disabled</a>
           </li>
-          <li class="nav-item dropdown" id="simple-dropdown" uib-dropdown on-toggle="toggled(open)">
+          <li class="nav-item dropdown" ng-class="{'show': simpleDDShow}" id="simple-dropdown" uib-dropdown on-toggle="simpleDDShow = !simpleDDShow;">
             <a class="nav-link dropdown-toggle" uib-dropdown-toggle>Dropdown</a>
             <div class="dropdown-menu"  uib-dropdown-menu aria-labelledby="simple-dropdown">
               <a class="dropdown-item" href="#">Action</a>
